@@ -1,0 +1,72 @@
+[
+  {
+    "fields": [
+      {
+        "description": "예: 최고의 기술력과 신뢰를 바탕으로 하는 수예산업",
+        "name": "title",
+        "type": "string",
+        "title": "회사 소개 한줄 타이틀"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "aboutImage",
+        "type": "image",
+        "title": "회사 소개 대표 이미지"
+      }
+    ],
+    "name": "about",
+    "type": "document",
+    "title": "회사 소개 설정"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "제품명"
+      },
+      {
+        "rows": 3,
+        "description": "제품에 대한 상세 스펙이나 설명을 적어주세요.",
+        "name": "description",
+        "type": "text",
+        "title": "제품 설명"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "productImage",
+        "type": "image",
+        "title": "제품 이미지"
+      }
+    ],
+    "name": "product",
+    "type": "document",
+    "title": "제품 및 서비스"
+  }
+]
